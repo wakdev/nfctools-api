@@ -9,9 +9,7 @@
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
   </head>
 <body>
-
   <div class="container">
-  	
   	<br/>
   	<div class="jumbotron">
   		<h1>Welcome on<br/>NFC Tools API<br/>Test page</h1>
@@ -19,36 +17,39 @@
   		<p><span class="glyphicon glyphicon-chevron-right"></span> 2nd, you just need touch this following button on your favorite Android web browser</p>
   	<?php 
 		
-		//initial call back domain
-		$callback = "http://try.api.nfc.systems/";
+	//initial call back domain
+	$callback = "http://try.api.nfc.systems/";
 		
-		//Adding callback tag infos.
-		$callback .= "?tagid={TAG-ID}";
-		$callback .= "&tagsize={TAG-SIZE}";
-		$callback .= "&tagmaxsize={TAG-MAXSIZE}";
-		$callback .= "&tagtype={TAG-TYPE}";
-		$callback .= "&tagiswritable={TAG-ISWRITABLE}";
-		$callback .= "&tagcanmakereadonly={TAG-CANMAKEREADONLY}";
+	//Adding callback tag infos.
+	$callback .= "?tagid={TAG-ID}";
+	$callback .= "&tagsize={TAG-SIZE}";
+	$callback .= "&tagmaxsize={TAG-MAXSIZE}";
+	$callback .= "&tagtype={TAG-TYPE}";
+	$callback .= "&tagiswritable={TAG-ISWRITABLE}";
+	$callback .= "&tagcanmakereadonly={TAG-CANMAKEREADONLY}";
 		
-		//Adding callback tag records.
-		$callback .= "&ndef-text={NDEF-TEXT}";
-		$callback .= "&ndef-uri={NDEF-URI}"; 
+	//Adding callback tag records.
+	$callback .= "&ndef-text={NDEF-TEXT}";
+	$callback .= "&ndef-uri={NDEF-URI}"; 
 		
-    //Just an anchor
-		$callback .= "#result";
-		?>
+    	//Just an anchor
+	$callback .= "#result";
+	?>
   		<p><a class="btn btn-primary btn-lg" role="button" href="nfc://scan/?callback=<?php echo urlencode($callback); ?>"><span class="glyphicon glyphicon-hand-up"></span> Touch for scan a NFC Tag</a></p>
 	</div>
 	
 	<?php 
-	if (isset($_GET["tagid"]) || isset($_GET["ndef-text"])){	
+	if (isset($_GET["tagid"])){
 	?>
+	
 	<br/><br/>
 	<a name="result"></a>
 	<div class="jumbotron">
+	
   		<h1>Results</h1>
   		
   		<?php
+  		//Recover TAG ID
   		if (isset($_GET["tagid"]) && !empty($_GET["tagid"])){
   		?>
   			<p><span class="glyphicon glyphicon-tag"></span> TAG ID</p>
@@ -62,6 +63,7 @@
   		?>
 		
 		<?php
+		//Recover TAG SIZE
   		if (isset($_GET["tagsize"]) && !empty($_GET["tagsize"])){
   		?>
   			<p><span class="glyphicon glyphicon-tag"></span> TAG SIZE</p>
@@ -75,6 +77,7 @@
   		?>
 		
 		<?php
+		//Recover TAG MAX SIZE
   		if (isset($_GET["tagmaxsize"]) && !empty($_GET["tagmaxsize"])){
   		?>
   			<p><span class="glyphicon glyphicon-tag"></span> TAG MAX SIZE</p>
@@ -88,6 +91,7 @@
   		?>
 		
 		<?php
+		//Recover TAG TYPE
   		if (isset($_GET["tagtype"]) && !empty($_GET["tagtype"])){
   		?>
   			<p><span class="glyphicon glyphicon-tag"></span> TAG TYPE</p>
@@ -101,6 +105,7 @@
   		?>
 		
 		<?php
+		//Recover TAG IS WRITABLE
   		if (isset($_GET["tagiswritable"]) && !empty($_GET["tagiswritable"])){
   		?>
   			<p><span class="glyphicon glyphicon-tag"></span> TAG IS WRITABLE ?</p>
@@ -114,6 +119,7 @@
   		?>
   		
 		<?php
+		//Recover TAG CAN MAKE READ ONLY
   		if (isset($_GET["tagcanmakereadonly"]) && !empty($_GET["tagcanmakereadonly"])){
   		?>
   			<p><span class="glyphicon glyphicon-tag"></span> TAG CAN MAKE READ ONLY ?</p>
@@ -127,6 +133,7 @@
   		?>
 		
   		<?php
+  		//Recover NDEF TEXT
   		if (isset($_GET["ndef-text"]) && !empty($_GET["ndef-text"])){
   		?>
   			<p><span class="glyphicon glyphicon-tag"></span> NDEF-TEXT</p>
@@ -140,6 +147,7 @@
   		?>
 		
 		<?php
+		//Recover NDEF URL
   		if (isset($_GET["ndef-uri"]) && !empty($_GET["ndef-uri"])){
   		?>
   			<p><span class="glyphicon glyphicon-tag"></span> NDEF-URI</p>
