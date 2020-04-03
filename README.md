@@ -5,12 +5,12 @@ API Instruction here : http://en.api.nfc.systems/
 
 Get NFC Tools for Android : http://getapp.nfctools.wakdev.com/
 
-Author : http://www.wakdev.com
+Author : https://www.wakdev.com
 
 
 Questions & Contact 
 -------------------
-Email : sayhi@wakdev.com
+Support : https://support.wakdev.com/
 
 Twitter : https://twitter.com/wakdev
 
