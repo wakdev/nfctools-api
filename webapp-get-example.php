@@ -1,7 +1,7 @@
 <?php
 
   // Define callback URL
-  $callback = "http://try.api.nfc.systems/";
+  $callback = "https://www.wakdev.com/contents/apps/nfctools/api/";
 
   // Adding callback tag infos.
   $callback .= "?tagid={TAG-ID}";
@@ -39,16 +39,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>api.nfc.systems</title>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <title>NFC Tools API: Test page</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
   </head>
   <body>
     <div class="container">
       <br/>
       <div class="jumbotron">
       	<h1>Welcome on NFC Tools API: Test page</h1>
-      	<p><span class="glyphicon glyphicon-chevron-right"></span> First, you need <a href="http://getapp.nfctools.wakdev.com/" target="_blank" title="nfc tools">NFC Tools</a> installed on your Android device</p>
+      	<p><span class="glyphicon glyphicon-chevron-right"></span> First, you need <a href="https://www.wakdev.com/en/apps/nfc-tools-android.html" target="_blank" title="nfc tools">NFC Tools</a> installed on your Android device</p>
       	<p><span class="glyphicon glyphicon-chevron-right"></span> 2nd, you just need touch this following button on your favorite Android web browser</p>
       	<p><a class="btn btn-primary btn-lg" role="button" href="<?php echo $callback_url; ?>"><span class="glyphicon glyphicon-hand-up"></span> Touch for scan a NFC Tag</a></p>
       </div>
@@ -128,6 +128,6 @@
     	<?php } ?>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   </body>
 </html>
